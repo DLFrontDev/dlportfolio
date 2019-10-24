@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+	<link rel="manifest" href="./favicons/manifest.json">
+	<link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="./favicons/favicon.ico">
+	<meta name="msapplication-config" content="./favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="keywords" content="Mudanças, Transportes, pequenos transportes, moveit mudancas, mudancas em lisboa, mudancas no barreiro, mudancas lowcost,mudancas nacionais,transportes internacionais,pequenas mudancas,embalamento,arrendar casa em lisboa,comprar casa em lisboa">
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Move It - Mudanças</title>
+
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+
+	<link href="./css/styles.css" rel="stylesheet" type="text/css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+	<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container-fluid" id="main">
+	<div class="row">
+		<div class="col">
+			<!-- Navigation Bar -->
+			<div class="row marg-bt-05">
+				<div class="col">
+					<center>
+						<img class="img-fluid" src="./images/logo.jpg">
+						<h2 class="d-inline-block">Mudamos a sua vida!</h2>
+					</center>
+
+					<nav class="navbar navbar-toggleable-sm navbar-moveit bg-moveit">
+						<button class="navbar-toggler navbar-toggler-right fa-mobile-icons" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+					    	<i class="fa fa-bars"></i>
+						</button>
+
+						<a class="hidden-md-up" href="index.html">
+							<i class="fa fa-home fa-mobile-icons"></i>
+						</a>
+
+						<div class="collapse navbar-collapse" id="navbar-links">
+							<ul class="navbar-nav mr-auto">
+								<li class="hidden-sm-down">
+									<a class="nav-link" href="index.html"><i class="fa fa-home"></i></a>
+								</li>
+								<li>
+									<a class="nav-link" href="servicos.html">Serviços</a>
+								</li>
+								<li>
+									<a class="nav-link" href="empresa.html">Empresa</a>
+								</li>
+								<li>
+									<a class="nav-link" href="contactos.html">Contactos</a>
+								</li>
+				            </ul>
+				    	</div>
+					</nav>
+				</div>
+			</div>
+			<!-- Content Area -->
+			<div class="row">
+				<div class="col">
+					<div class="row marg-bt-1"	>
+						<div class="col">
+							<img class="img-fluid" src="./images/banner.jpg">
+						</div>
+					</div>
+					<div class="row marg-bt-1">
+						<div class="col">		
+							<h4>PEDIDO DE ORÇAMENTO SEM COMPROMISSO</h4>
+							<p class="desc-text">
+								A Move It gosta de dar preços por hora, adequados a cada serviço de mudança. É importante que seja preenchido o formulário o mais completo possível de modo a não haver estimativas desajustadas. Se tiver alguma dúvida extra não hesite em ligar-nos.<br>
+								<br>
+								Ao preencher este formulário, a Move it poderá entrar em contacto com o cliente de modo a esclarecer eventuais dúvidas. A informação que colocar, é confidencial e será apenas usada pela Move It para fazer estimativas e esclarecer dúvidas. O pagamento dos nossos serviços pode ser efetuado em dinheiro ou por multibanco.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col">
+							<!-- Form Starts Here -->
+							<form id="form_budget" name="form_budget" ng-app="app_budget" ng-controller="validate_budget" ng-submit="processForm()" novalidate>
+								<div class="row marg-bt-05">
+									<div class="col-10">
+										<h5>PASSO 1: CONTACTOS </h5>
+									</div>
+									<div class="col text-right">
+										<h5><i class="fa fa-minus" id="indicator-1" data-toggle="collapse" data-target="#step-1" onclick="toggleIndicator(this)"></i></h5>
+									</div>
+								</div>
+								<div class="row marg-bt-1 collapse show" id="step-1">
+									<div class="col">
+										<hr>
+										<div class="row form-group">
+											<div class="col marg-bt-05">
+												<label for="form_name">Nome</label>
+												<input class="form-control" type="text" id="form_name" name="form_name" ng-model="form_name" ng-valid="addSuccess(this)" required>
+											</div>
+											<div class="col-12" ng-show="form_budget.form_name.$touched && form_budget.form_name.$invalid" ng-cloak>
+												<div class="alert alert-danger" role="alert" >
+													<span ng-show="form_budget.form_name.$error.required">Campo obrigatório!</span>
+												</div>
+											</div>
+										</div>
+										<div class="row form-group">
+											<div class="col marg-bt-05">
+												<label for="form_mail">Email</label>
+												<input class="form-control" type="email" id="form_mail" name="form_mail" ng-model="form_mail" required>
+											</div>
+											<div class="col-12" ng-show="form_budget.form_mail.$touched && form_budget.form_mail.$invalid" ng-cloak>
+												<div class="alert alert-danger" role="alert">
+													<span ng-show="form_budget.form_mail.$error.required">Campo obrigatório!</span>
+													<span ng-show="form_budget.form_mail.$error.email">Email Inválido!</span>
+												</div>
+											</div>										
+										</div>
+										<div class="row form-group">
+											<div class="col col-md-8 marg-bt-05">
+												<label for="form_number">Nr Telemóvel/Telefone</label>
+												<input class="form-control" type="text" id="form_number" name="form_number" ng-model="form_number" required>
+											</div>
+											<div class="col-12" ng-show="form_budget.form_number.$touched && form_budget.form_number.$invalid" ng-cloak>
+												<div class="alert alert-danger" role="alert" >
+													<span ng-show="form_budget.form_number.$error.required">Campo obrigatório!</span>
+												</div>
+											</div>
+										</div>
+										<div class="row form-group">
+											<div class="col-12">
+												<label for="form_date">Data prevista para a mudança</label>
+											</div>
+											<div class="col-6 marg-bt-05">
+												<input class="form-control" type="text" id="form_date" name="form_date" ng-model="form_date" ng-click="show('2')" required>
+											</div>
+											<div class="col-12" ng-show="form_budget.form_date.$touched && form_budget.form_date.$invalid" ng-cloak>
+												<div class="alert alert-danger" role="alert" >
+													<span ng-show="form_budget.form_date.$error.required">Campo obrigatório!</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row marg-bt-05">
+									<div class="col-10">
+										<h5>PASSO 2: CARGA/DESCARGA </h5>
+									</div>
+									<div class="col text-right">
+										<h5><i class="fa fa-plus"  id="indicator-2" data-toggle="collapse" data-target="#step-2" onclick="toggleIndicator(this)"></i></h5>
+									</div>
+								</div>
+								<div class="row marg-bt-1 collapse" id="step-2">
+									<div class="col">
+										<hr>
+										<div class="row marg-bt-1">
+											<div class="col">
+												<h5>Local de Carga</h5>
+												<div class="row form-group">
+													<div class="col marg-bt-05">
+														<label for="form_load_addr">Morada</label>
+														<input class="form-control" type="text" id="form_load_addr" name="form_load_addr" ng-model="form_load_addr" required>
+													</div>
+													<div class="col-12" ng-show="form_budget.form_load_addr.$touched && form_budget.form_load_addr.$invalid" ng-cloak>
+														<div class="alert alert-danger" role="alert" >
+															<span ng-show="form_budget.form_load_addr.$error.required">Campo obrigatório!</span>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col marg-bt-05">
+														<label for="form_load_local">Localidade</label>
+														<input class="form-control" type="text" id="form_load_local" name="form_load_local" ng-model="form_load_local" required>
+													</div>
+													<div class="col-12" ng-show="form_budget.form_load_local.$touched && form_budget.form_load_local.$invalid" ng-cloak>
+														<div class="alert alert-danger" role="alert" >
+															<span ng-show="form_budget.form_load_local.$error.required">Campo obrigatório!</span>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-4 col-6 marg-bt-05">
+														<label for="form_load_postal">Código Postal</label>
+														<input class="form-control" type="text" id="form_load_postal" name="form_load_postal" ng-model="form_load_postal" required>
+													</div>
+													<div class="col-12" ng-show="form_budget.form_load_postal.$touched && form_budget.form_load_postal.$invalid" ng-cloak>
+														<div class="alert alert-danger" role="alert" >
+															<span ng-show="form_budget.form_load_postal.$error.required">Campo obrigatório!</span>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-12">												
+														<label for="form_load_room">Nr de Assoalhadas</label>
+													</div>
+													<div class="col-md-3 col-6 marg-bt-05">
+														<input class="form-control" type="number" id="form_load_room" name="form_load_room" value="1" min="1" ng-model="form_load_room" required>
+													</div>
+													<div class="col-12" ng-show="form_budget.form_load_room.$touched && form_budget.form_load_room.$invalid" ng-cloak>
+														<div class="alert alert-danger" role="alert" >
+															<span ng-show="form_budget.form_load_room.$error.required">Campo obrigatório!</span>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-12">
+														<label for="form-load-elevator">Possui Elevador</label>
+													</div>
+													<div class="col-md-3 col-6">
+														<select class="form-control" id="form_load_elevator" name="form_load_elevator" ng-value="form_load_elevator">
+															<option value="Sim">Sim</option>
+															<option value="Não">Não</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col">
+												<h5>Local de Descarga</h5>
+												<div class="row form-group">
+													<div class="col marg-bt-05">
+														<label for="form_unload_addr">Morada</label>
+														<input class="form-control" type="text" id="form_unload_addr" name="form_unload_addr" ng-model="form_unload_addr" required>
+													</div>
+													<div class="col-12" ng-show="form_budget.form_unload_addr.$touched && form_budget.form_unload_addr.$invalid" ng-cloak>
+														<div class="alert alert-danger" role="alert" >
+															<span ng-show="form_budget.form_unload_addr.$error.required">Campo obrigatório!</span>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col marg-bt-05">
+														<label for="form_unload_local">Localidade</label>
+														<input class="form-control" type="text" id="form_unload_local" name="form_unload_local" ng-model="form_unload_local" required>
+													</div>
+													<div class="col-12" ng-show="form_budget.form_unload_local.$touched && form_budget.form_unload_local.$invalid" ng-cloak>
+														<div class="alert alert-danger" role="alert" >
+															<span ng-show="form_budget.form_unload_local.$error.required">Campo obrigatório!</span>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-md-4 col-6 marg-bt-05">
+														<label for="form_unload_postal">Código Postal</label>
+														<input class="form-control" type="text" id="form_unload_postal" name="form_unload_postal" ng-model="form_unload_postal"  ng-click="show('3')" required>
+													</div>
+													<div class="col-12" ng-show="form_budget.form_unload_postal.$touched && form_budget.form_unload_postal.$invalid" ng-cloak>
+														<div class="alert alert-danger" role="alert" >
+															<span ng-show="form_budget.form_unload_postal.$error.required">Campo obrigatório!</span>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-12">												
+														<label for="form_unload_room">Nr de Assoalhadas</label>
+													</div>
+													<div class="col-md-3 col-6 marg-bt-05">
+														<input class="form-control" type="number" id="form_unload_room" name="form_unload_room" value="1" min="1" ng-model="form_unload_room" required>
+													</div>
+													<div class="col-12" ng-show="form_budget.form_unload_room.$touched && form_budget.form_unload_room.$invalid" ng-cloak>
+														<div class="alert alert-danger" role="alert" >
+															<span ng-show="form_budget.form_unload_room.$error.required">Campo obrigatório!</span>
+														</div>
+													</div>
+												</div>
+												<div class="row form-group">
+													<div class="col-12">
+														<label for="form_unload_elevator">Possui Elevador</label>
+													</div>
+													<div class="col-md-3 col-6">
+														<select class="form-control" id="form_unload_elevator" name="form_unload_elevator">
+															<option>Sim</option>
+															<option>Não</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row marg-bt-05">
+									<div class="col-10">
+										<h5>PASSO 3: DETALHES FINAIS </h5>
+									</div>
+									<div class="col text-right">
+										<h5><i class="fa fa-plus" id="indicator-3" data-toggle="collapse" data-target="#step-3" onclick="toggleIndicator(this)"></i></h5>
+									</div>
+								</div>
+								<div class="row marg-bt-1 collapse" id="step-3">
+									<div class="col">
+										<hr>
+										<div class="row form-group">
+											<div class="col-12">
+												<label for="form-boxes">Deseja caixas para armazenar recheio (custo extra)</label>
+											</div>
+											<div class="col-md-3 col-6">
+												<select class="form-control" id="form-boxes" name="form-boxes" ng-model="form_boxes">
+													<option value="Sim">Sim</option>
+													<option value="Não">Não</option>
+												</select>
+											</div>
+										</div>
+										<div class="row form-group">
+											<div class="col-12">
+												<label for="form-furn">Mudança com montagem e desmontagem de móveis</label>
+											</div>
+											<div class="col-md-3 col-6">
+												<select class="form-control" id="form-furn" name="form_furn" ng-model="form_furn">
+													<option value="Sim">Sim</option>
+													<option value="Não">Não</option>
+												</select>
+											</div>
+										</div>
+										<div class="row form-group marg-bt-15">
+											<div class="col">
+												<label for="form-comment">Observações (indique-nos o número de móveis, electrodomésticos e de caixas a mudar)</label>
+												<textarea class="form-control" id="form-comment" name="form_comment" ng-model="form_comment" rows="8"></textarea>
+											</div>
+										</div>
+										<div class="row form-group marg-bt-15">
+											<div class="col">
+												<label for="form-comment">Como teve conhecimento da Move It?</label>
+												<div class="form-check">
+												  <label class="form-check-label">
+												    <input class="form-check-input" type="radio" name="form-radio" id="form-radio-1" ng-model="form_info" value="Motores de busca">
+												    Motores de Busca (Google, yahoo, sapo, etc)
+												  </label>
+												</div>
+												<div class="form-check">
+												  <label class="form-check-label">
+												    <input class="form-check-input" type="radio" name="form-radio" id="form-radio-2" ng-model="form_info" value="Anúncios no jornal">
+												    Anúncios no jornal
+												  </label>
+												</div>
+												<div class="form-check">
+												  <label class="form-check-label">
+												    <input class="form-check-input" type="radio" name="form-radio" id="form-radio-3" ng-model="form_info" value="Publicidade nas viaturas">
+												    Publicidade nas viaturas
+												  </label>
+												</div>
+												<div class="form-check">
+												  <label class="form-check-label">
+												    <input class="form-check-input" type="radio" name="form-radio" id="form-radio-4" ng-model="form_info" value="Amigo">
+												    Pessoa amiga
+												  </label>
+												</div>
+												<label for="form-other">Outro</label>
+												<input class="form-control"  type="text" id="form-other" name="form_other" ng-model="form_other">
+											</div>
+										</div>
+										<div class="row form-group">
+											<div class="col marg-bt-05">
+												<button class="btn btn-primary btn-block" ng-disabled="form_budget.$invalid || form_budget.$submitted">Enviar</button>
+											</div>
+											<div class="col-12">
+												<div class="alert alert-danger" role="alert" ng-show="form_budget.$invalid" ng-cloak ng-hide="form_budget.$submitted">
+													Campos obrigatórios por preencher acima!
+												</div>
+												<div class="alert alert-success" role="alert" ng-show="form_budget.$submitted">
+													Orçamento enviado com sucesso!
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>					
+							</form>
+								<div class="row marg-tp-50 hidden-md-up">
+									<div class="col">
+										<h5>Autocar - comércio de automóveis</h5>
+										<img class="img-fluid marg-bt-05" src="./images/12-9.jpg">
+										<p>A Move It apresenta aos nossos clientes a Autocar. Uma empresa especializada no ramo automóvel com mais de 15 anos de experiência. Visite o site e saiba mais sobre a empresa ou ligue para mais informações.<br>
+										<br>
+										<a href="http://www.autocar.com.pt">www.autocar.com.pt</a><br>
+										Tlm: 927 247 233</p>
+									</div>
+								</div>
+						</div>
+						<div class="col hidden-sm-down">
+							<div class="row marg-bt-15">
+								<div class="col">
+									<h5>Métodos de Pagamento</h5>
+									<img class="img-fluid" src="./images/11-10.jpg">
+									<p>A Move It disponibiliza a possibilidade de pagar a sua mudança em dinheiro ou através de multibanco</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<h5>Autocar - comércio de automóveis</h5>
+									<img class="img-fluid" src="./images/12-9.jpg">
+									<p>A Move It apresenta aos nossos clientes a Autocar. Uma empresa especializada no ramo automóvel com mais de 15 anos de experiência. Visite o site e saiba mais sobre a empresa ou ligue para mais informações.<br>
+									<br>
+									<a href="http://www.autocar.com.pt">www.autocar.com.pt</a><br>
+									Tlm: 927 247 233</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<!-- Footer -->
+			<div class="row marg-tp-50">
+				<div class="col">
+					<div class="row">
+						<div class="col">
+							<div class="footer-display bg-moveit">
+								<h6>
+									<span class="footer-info">www.moveit-mudancas.com</span>
+									<span class="hidden-sm-down"> | </span>
+									<span class="footer-info">geral@moveit-mudancas.com</span>
+									<span class="hidden-sm-down"> | </span>
+									<span class="footer-info">Telf.: 962 600 211</span>
+								</h6>
+							</div>						
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<nav class="navbar navbar-toggleable-sm navbar-light bg-faded">						
+								<ul class="navbar-nav">
+									<li>
+										<a class="nav-link" href="index.html"><i class="fa fa-home"></i></a>
+									</li>
+									<li>
+										<a class="nav-link" href="servicos.html">Serviços</a>
+									</li>
+									<li>
+										<a class="nav-link" href="empresa.html">Empresa</a>
+									</li>
+									<li>
+										<a class="nav-link" href="contactos.html">Contactos</a>
+									</li>
+					            </ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+    	function toggleIndicator (target) {
+    		$(target).toggleClass("fa-plus");
+    		$(target).toggleClass("fa-minus");
+    	}
+
+		var app_budget = angular.module('app_budget', [ ]);
+
+		app_budget.controller('validate_budget', function($scope, $http) {
+			$scope.form_name='';
+			$scope.form_mail='';
+			$scope.form_number='';
+			$scope.form_date='';
+
+			$scope.form_load_addr='';
+			$scope.form_load_local='';
+			$scope.form_load_postal='';
+			$scope.form_load_room=1;
+			$scope.form_load_elevator='Não';
+
+			$scope.form_unload_addr='';
+			$scope.form_unload_local='';
+			$scope.form_unload_postal='';
+			$scope.form_unload_room=1;
+			$scope.form_unload_elevator='Não';
+
+			$scope.form_boxes='Não';
+			$scope.form_furn='Não';
+			$scope.form_comment='';
+			$scope.form_info=null;
+			$scope.form_other='';
+
+			$scope.show= function (target) {
+				$("#step-"+target).collapse("show");
+				toggleIndicator ("#indicator-"+target);
+			};
+
+			$scope.processForm = function () {
+				$http.post('processBudget.php', {
+					"form_name": $scope.form_name,
+					"form_mail": $scope.form_mail,
+					"form_number": $scope.form_number,
+					"form_date": $scope.form_date,
+					"form_load_addr": $scope.form_load_addr,
+					"form_load_local": $scope.form_load_local,
+					"form_load_postal": $scope.form_load_postal,
+					"form_load_room": $scope.form_load_room,
+					"form_load_elevator": $scope.form_load_elevator,
+					"form_unload_addr": $scope.form_unload_addr,
+					"form_unload_local": $scope.form_unload_local,
+					"form_unload_postal": $scope.form_unload_postal,
+					"form_unload_room": $scope.form_unload_room,
+					"form_unload_elevator": $scope.form_unload_elevator,
+					"form_boxes": $scope.form_boxes,
+					"form_furn": $scope.form_furn,
+					"form_comment": $scope.form_comment,
+					"form_boxes": $scope.form_boxes,
+					"form_info": $scope.form_info,
+					"form_other": $scope.form_other
+				}).then(function successCallback(data, status) {
+					console.log(data);
+					console.log(status);
+				    // this callback will be called asynchronously
+				    // when the response is available
+				  });
+			}
+    	});
+	</script>
+</body>
+
+</html>

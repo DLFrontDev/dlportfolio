@@ -1,0 +1,17 @@
+﻿Researchers are quickly learning that plants are far more complex than once thought. Not only has it been determined that plants are capable of sensing and preparing for drought conditions, a team from the University of Birmingham recently learned that a cluster of cells in seeds act like a brain that decide when they should germinate. As a result of this finding, crop yields may be improved.
+|
+1.jpg
+|
+The study, published in the journal Proceedings of the National Academy of Sciences (PNAS), explains that the researchers worked with a species called thale cress to determine whether or not plants have human-like “brains.” After locating the group of cells in the seed that are responsible for controlling decision-making processes, they discovered something interesting. Reportedly, the group of cells is made up of two competing types: one promotes germination and the other promotes dormancy. The scientists describe the relationship as a “tug of war” match, as hormones are swapped back and forth in a process that’s very similar to mechanisms in the human brain when someone decides whether or not to move.
+
+The team says the separate competing cells are key to the decision-making process in both humans and plants. The mechanism serves an important purpose in vegetation, because germinating too early may result in death due to frost. Alternatively, germinating too late will result in growing complications due to the wrong climate conditions.
+
+Said George Bassel, lead author of the study, “Our work reveals a crucial separation between the components within a plant decision-making center. In the human brain, this separation is thought to introduce a time delay, smoothing out noisy signals from the environment and increasing the accuracy with which we make decisions. The separation of these parts in the seed ‘brain’ also appears to be central to how it functions.”
+|
+2.jpg
+|
+After creating a mathematical model of how the separate cells work to control how sensitive the plant is to its environment, the researchers concluded that the more variation there is in environmental conditions, the more seeds will sprout. This sounds counter-intuitive, but the results were confirmed when the team tested it in a laboratory.
+
+“Our work has important implications for understanding how crops and weeds grow,” said Bassel. “There is now potential to apply this knowledge to commercial plants in order to enhance and synchronize germination, increasing crop yields and decreasing herbicide use.”
+
+<i>Link to the <a href="http://inhabitat.com/scientists-discover-plants-have-brains-that-decide-when-to-sprout/">original article</a></i>

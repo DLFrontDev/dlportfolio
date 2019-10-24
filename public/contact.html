@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+	<title>DL Portfolio</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+</head>
+<body>
+	<!-- Mobile Navbar -->
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded hidden-lg-up" id="navbar-mobile">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="index.html">
+			<img class="align-top" height="60px" src="./images/logo.svg">
+			DL Portfolio
+		</a>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-link">
+					<a href="projects.html">Projetos</a>
+				</li>
+				<li class="nav-link">
+					<a href="curriculum.html">Currículo</a>
+				</li>
+				<li class="nav-link current">
+					<a href="contact.html">Contacto</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row no-gutters">
+			<div class="col-2 hidden-md-down" id="sidebar-alt">
+				<nav class="navbar bg-faded">
+					<h4 class="navbar-title">
+						Portefólio<br>
+						Diogo Luís
+					</h4>
+					<a class="navbar-brand" href="index.html">
+						<img class="img-fluid" width="100%" src="./images/logo.svg">
+					</a>
+					<ul class="navbar-nav">
+						<li class="nav-link">
+							<a href="projects.html">Projetos</a>
+						</li>
+						<li class="nav-link">
+							<a href="curriculum.html">Currículo</a>
+						</li>
+						<li class="nav-link current">
+							<a href="contact.html">Contacto</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col" id="content-background">
+				<div class="row justify-content-center">
+					<div class="col-lg-8 col-10" id="content-area">
+						<div class="row project-block">
+							<div class="col">
+								<div class="row">
+									<div class="col">
+										<h3>Contacto</h3>
+										<hr>
+										<img id="img-contact" src="./images/face.jpg">
+										<center>A minha caixa de correio encontra-se aberta para inquéritos e propostas de trabalho.</center>
+									</div>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-10 col">
+										<form id="email-form" method="post">
+											<a class="btn btn-primary btn-block" href="mailto:diogocardosoluis@gmail.com">Enviar Email</a>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+	<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./scripts/validate.min.js"></script>
+
+</body>
+</html>

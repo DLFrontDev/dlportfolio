@@ -1,0 +1,120 @@
+#showcase-container {
+	padding: 0;
+	background-color: white;
+}
+
+#carousel img {
+	width: 100%;
+}
+
+
+/* Slick Modifications*/
+
+.slick-prev {
+	left: 0;
+}
+
+.slick-next {
+	right: 0;
+}
+
+.slick-next, .slick-prev {
+	z-index: 1;
+	width: 5%;
+	background-color: white;
+	height: 100%;
+}
+
+.slick-prev:before {
+	content: "\f104";
+}
+
+.slick-next:before {
+	content: "\f105";
+}
+
+.slick-next:before, .slick-prev::before {
+	color: black;
+	font-family: "FontAwesome";
+	font-size: 40px;
+}
+
+
+/* Description Texts */
+
+.title-label, .tag-label {	
+	padding: 0 2em;
+	line-height: 2em;
+}
+
+.tag-label {
+	font-weight: bold;
+	background-color: #b2bf26;
+	color: white;
+	text-align: center;
+	padding: 0 3em;
+}
+
+.title-label {
+	padding-left: 1.5em;
+	background-color: white;
+}
+
+#showcase-container {
+	padding-bottom: 2em;
+}
+
+#preview-carousel {
+	margin-top: 20px;
+}
+
+#preview-carousel .preview-text {
+	width: 90%;
+	font-size: 1rem;
+}
+
+#preview-carousel .slick-list {
+	width: 100%;
+}
+
+#preview-carousel img {
+	max-width: 25%;
+	cursor: pointer;
+}
+
+/*#preview-carousel .slick-arrow {
+	width: 5%;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#preview-carousel .slick-arrow:focus {
+	background-color: rgba(0,0,0,0.2);
+}
+
+
+#preview-carousel .slick-prev {
+	left: -15px;
+}
+
+#preview-carousel .slick-next {
+	right: -15px;
+}
+
+#preview-carousel .slick-arrow:hover {
+	background-color: rgba(0,0,0,0.75);
+}*/
+
+@media screen and (max-width: 768px) {
+
+	.tag-label {
+		width: 100%;
+		text-align: left;	
+		padding-left: 15px;
+	}
+
+	.title-label {
+		line-height: 100%;
+		padding-left: 15px;
+		padding-top: 1em;
+	}
+}
